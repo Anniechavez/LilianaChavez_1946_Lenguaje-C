@@ -6,8 +6,7 @@ using namespace std;
 
 void llenarvector(int v[], int n) {
     for(int i = 0; i < n; i++) {
-        //v[i]=rand()%20+1;
-        cin>>v[i];
+        cin >> v[i];
     }
 }
 
@@ -20,12 +19,12 @@ void copiarVector(int origen[], int destino[], int n) {
 int ordenaburbuja(int v[], int n) {
     int aux, cont = 0;
     for(int i = 0; i < n; i++) {
-        for(int j=0; j < n - 1; j++) {
+        for(int j = 0; j < n - 1; j++) {
             cont++;
-            if(v[j]>v[j + 1]) {
-                aux=v[j];
-                v[j]=v[j + 1];
-                v[j+1] = aux;
+            if(v[j] > v[j + 1]) {
+                aux = v[j];
+                v[j] = v[j + 1];
+                v[j + 1] = aux;
             }
         }
     }
@@ -69,6 +68,23 @@ int ordenaburbujav3(int v[], int n) {
     return cont;
 }
 
+string determinarVersion(int comp1, int comp2, int comp3) {
+    int minComp = comp1;
+    string version = "Version 1";
+    
+    if (comp2 < minComp) {
+        minComp = comp2;
+        version = "Version 2";
+    }
+    
+    if (comp3 < minComp) {
+        minComp = comp3;
+        version = "Version 3";
+    }
+    
+    return version;
+}
+
 void muestravector(int v[], int n) {
     for(int i = 0; i < n; i++) {
         cout << v[i] << " ";
@@ -79,12 +95,12 @@ int main() {
     int ne;
     cout << "Numero de elementos: ";
     cin >> ne;
+    
     int vec[ne];
     int vec2[ne];
     int vec3[ne];
-    
     llenarvector(vec, ne);
-    cout << "Vector original: "<<endl;
+    cout << "Vector original: ";
     muestravector(vec, ne);
     cout << endl;
     copiarVector(vec, vec2, ne);
@@ -95,6 +111,8 @@ int main() {
     cout << "Comparaciones version 1: " << comp1 << endl;
     cout << "Comparaciones version 2: " << comp2 << endl;
     cout << "Comparaciones version 3: " << comp3 << endl;
-    cout << "\nVector ordenado: "<<endl;
+    string versionOptima = determinarVersion(comp1, comp2, comp3);
+    cout << "Version mas optima: " << versionOptima << endl;
+    cout << "\nVector ordenado : ";
     muestravector(vec, ne);
 }
