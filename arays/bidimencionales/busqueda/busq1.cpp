@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 //#include ""
+//#include "../../../libreria/arrays.h"
 using namespace std;
 
 bool isBusquedaBinaria(int v[], int n, int elemento) {
@@ -47,15 +48,15 @@ int main() {
     int vector[ne];
     llenarDatos(vector, ne);
     
-    cout << "Arreglo generado: ";
-    verElemento(vector, ne);
-    
     cout << "Ingresar el dato que buscas: ";
     cin >> dato;
-    
     (isBusquedaBinaria(vector, ne, dato)) ? 
         cout << "Dato encontrado" : 
         cout << "Dato no encontrado";
+    
+    
+    cout << "Arreglo generado: ";
+    verElemento(vector, ne);
     
     return 0;
 }
