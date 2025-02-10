@@ -5,7 +5,8 @@
 #include <time.h>
 #include "lilianaChavez.h"
 
-class NumberGuessingGame {
+class NumberGuessingGame 
+{
 private:
     int targetNumber;
     int minRange;
