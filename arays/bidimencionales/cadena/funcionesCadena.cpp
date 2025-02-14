@@ -58,7 +58,7 @@ bool esespacio(char cad1[]){
 bool esmayusculas(char cad1[]){
     bool mayuscula=true;
     for(int i=0;i<strlen(cad1);i++){
-        if(isoper(cad1[i]==false)){
+        if(isupper(cad1[i]==false)){
             mayuscula=false;
             break;// este break rompe eñ bucle
         }
@@ -66,17 +66,18 @@ bool esmayusculas(char cad1[]){
 
 }
 
-bool esminuscula(char cad1[]{
+bool esminuscula(char cad1[])
+    {
     bool minuscula=true;
     for(int i=0;i<strlen(cad1);i++){
-        if(isoper(cad1[i]==false)){
+        if(isupper(cad1[i]==false)){
             minuscula=false;
             break;// este break rompe eñ bucle
         }
     }
 
 
-})
+}
 main(){
     int comparacion;
     char cad1[50],cad2[50];
