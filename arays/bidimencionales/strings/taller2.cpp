@@ -49,6 +49,10 @@ main(){
     cout<<"encontrado = "<<encontrado;
     (cadena1.find( " cos ")== string :: npos )? cout<< "Noencontradop ":cout<<"encontado";//string :: npos axeder a una constante como "string namespace std" o una libreria o llamar esta constante 
     //remplace (6,5,"la lista") o tambien remplace (pos ,size ,porcion.subtr(0.size));
+    string numerostr = "123";
+    int numero =stoi (numerostr);
+    cout <<endl;
+    cout<<numero<<endl;
+    cin >>numero;
 
-   
 }
