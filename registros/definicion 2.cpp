@@ -8,6 +8,10 @@ struct persona{
  void registro(){
     persona p5, p6;
  }
+ struct{
+    string nombre;
+    float nota;
+}e1,e2;
 main(){
     /*typedef persona personas;
     typedef int entero;
@@ -30,5 +34,11 @@ main(){
     cout << "Nombre: "<< p4.nombre << endl;
     cout << "Edad: "<< p4.edad << endl;
     cout << "Estatura: "<< p4.estatura << endl;
+    cout<<"Datos de los estudiante No1:"<<endl;
+    getline (cin ,e1.nombre);
+    cout<<"Nota";
+
+
+
 
 }
